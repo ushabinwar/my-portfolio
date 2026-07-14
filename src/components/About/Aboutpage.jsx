@@ -36,8 +36,8 @@ const Aboutpage = () => {
   <div className="flex  flex-col-reverse lg:flex-row items-center gap-10 lg:gap-10">
 
     {/* Left Image */}
-    <div className="w-full lg:p-10  md:w-1/2 lg:w-1/2">
-      <div className="h-100 md:h-140  lg:h-140 rounded-3xl overflow-hidden">
+    <div className="w-full lg:p-16  md:w-1/2 lg:w-1/2">
+      <div className="h-100 md:h-140  lg:h-160 rounded-3xl overflow-hidden">
         <img
           src={ushaImage}
           alt=""

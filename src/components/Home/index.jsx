@@ -4,6 +4,7 @@ import Navbar from '../Nav'
 import Projects from '../Projects'
 import AnimateScrollbar from '../AnimateScrollbar'
 import Aboutpage from '../About/Aboutpage'
+import Footer from '../Footer'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <AnimateScrollbar/>
       <Projects/>
       <Aboutpage/>
+      <Footer/>
     </div>
   )
 }

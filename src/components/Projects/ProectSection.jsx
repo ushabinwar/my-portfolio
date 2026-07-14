@@ -81,7 +81,7 @@ const ProjectSection = () => {
 
             {projectData?.map((data, index)=>{
                 return (
-                    <div key={index} className='mt-2 border rounded-xl px-2 py-8 bg-red-400 '>
+                    <div key={index} className='mt-2 border rounded-xl px-2 py-8  '>
                 <h1 className=' font-[MangoGro] text-5xl'> <span className='opacity-50'>{index + 1}.</span> {data?.title}</h1>
                 <p className='text-xl leading-6 font-normal my-8'>{data?.descripion}
                 </p>
