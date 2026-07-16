@@ -48,10 +48,10 @@ const ContactForm = () => {
           CONTACT
         </h1>
       </div>
-       <p className='w-full  flex m-auto md:w-[40%] text-md text-center opacity-80 my-4'>"Great products aren't built by code alone—they're built through collaboration, creativity, and attention to detail. If you have an idea worth bringing to life, I'd love to help make it happen."</p>
+       <p className='w-full  flex m-auto lg:w-[40%] text-md text-center opacity-80 my-4'>"Great products aren't built by code alone—they're built through collaboration, creativity, and attention to detail. If you have an idea worth bringing to life, I'd love to help make it happen."</p>
       <h4 className='text-center [-webkit-text-stroke:1px_black] mt-2 '>ushabinwar@gmail.com</h4>
-      <form className=' md:w-1/2 md:m-auto ' onSubmit={sendEmail} ref={formRef}>
-       <div className='md:flex gap-3 mt-10'>
+      <form className=' lg:w-1/2 md:w-2/3 md:m-auto ' onSubmit={sendEmail} ref={formRef}>
+       <div className='lg:flex gap-3 mt-10'>
         <input
           className=' w-full  px-4 py-4 rounded-2xl border border-dashed border-black text-xl    placeholder:text-gray-400
              focus:outline-none
@@ -66,7 +66,7 @@ const ContactForm = () => {
           autoFocus
         />
         <input
-          className='w-full px-4 py-4 rounded-2xl border border-dashed border-black text-xl mt-3 md:mt-0  placeholder:text-gray-400
+          className='w-full px-4 py-4 rounded-2xl border border-dashed border-black text-xl mt-3 mg:mt-0  placeholder:text-gray-400
              focus:outline-none
              focus:border-solid
              focus:border-black
