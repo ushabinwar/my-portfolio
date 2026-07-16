@@ -82,7 +82,7 @@ const Footer = () => {
       I'd be happy to connect, collaborate, or just chat about new ideas.
     </p>
 
-    <div className="flex flex-wrap gap-3 mt-7">
+    <div className="flex flex-wrap gap-3 md:gap-5 mt-7">
       {socialLinks.map((item) => (
         <a
           key={item.name}

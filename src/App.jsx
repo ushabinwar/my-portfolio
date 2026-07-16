@@ -7,6 +7,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Navbar from './components/Nav'
 import Cursor from './components/Cursor'
+import Aboutpage from './components/About/Aboutpage'
+import Contact from './components/Contact'
 
 function App() {
   
@@ -67,10 +69,12 @@ function App() {
       {theme === "light" ? "🌙 Dark" : "☀️ Light"}
     </button> */}
          <Cursor/>
+         <Navbar/>
       <Routes>
      
       <Route path="/" element={<Home/>} />
-      {/* <Route path="/about" element={<About />} /> */}
+      <Route path="/about" element={<Aboutpage />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
 
     </>

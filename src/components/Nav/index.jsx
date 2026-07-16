@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
-  console.log(toggle)
+
 
   const line1 = document.querySelector(".line1")
   const line2 = document.querySelector(".line2")
@@ -23,7 +24,7 @@ const Navbar = () => {
   }
   return (
     <>
-    <div className='absolute z-10 w-full px-5 py-4 flex justify-between'>
+    <div className=' z-10 w-full px-5 py-4 flex justify-between  fixed'>
         <h5 className='font-[mangoGro] text-2xl'>ub</h5>
         {/* <div onClick={MenuClick} className='circle bg-black flex flex-col gap-1 items-center h-12 w-12 rounded-full  justify-center '>
            <div className={`line1 h-0.5 w-7 bg-cream rounded-2xl transition-all duration-500 ease-in-out ${
@@ -51,28 +52,38 @@ const Navbar = () => {
 </div>
     </div>
     
-    <div className={`h-screen z-6 w-full bg-cream absolute flex flex-col justify-center items-center ${ toggle ? "block" : "hidden"} `}>
+    <div className={`h-screen z-6 w-full bg-cream fixed flex flex-col justify-center items-center  ${ toggle ? "block" : "hidden"} `}>
       <div className=' flex flex-col gap-10 bg-red-300  m-12 '>
+        <Link onClick={()=>setToggle(false)} to="/">
         <div className='flex gap-5 items-center'>
           <span className="w-8 text-right text-black text-3xl font-normal font-sans">01.</span>
           <h1 className='text-4xl text-black font-normal font-sans '> Home</h1>
         </div>
+        </Link>
+        <Link onClick={()=>setToggle(false)}  to='/about'>
         <div className='flex gap-5 items-center'>
           <span className="w-8 text-right text-black text-3xl font-normal font-sans">02.</span>
           <h1 className='text-4xl text-black font-normal font-sans '>About</h1>
         </div>
+        </Link >
+        <Link onClick={()=>setToggle(false)} to='/project'>
         <div className='flex gap-5 items-center'>
           <span className="w-8 text-right text-black text-3xl font-normal font-sans">03.</span>
           <h1 className='text-4xl text-black font-normal font-sans '> Project</h1>
         </div>
+        </Link>
+        <Link onClick={()=>setToggle(false)} to='experience'>
         <div className='flex gap-5 items-center'>
           <span className="w-8 text-right text-black text-3xl font-normal font-sans">04.</span>
           <h1 className='text-4xl text-black font-normal font-sans '> Experince</h1>
         </div>
+        </Link>
+        <Link onClick={()=>setToggle(false)}  to="/contact">
         <div className='flex gap-5 items-center'>
           <span className="w-8 text-right text-black text-3xl font-normal font-sans">05.</span>
           <h1 className='text-4xl text-black font-normal font-sans '>Contact</h1>
         </div>
+        </Link>
        
       </div>
       <div className='bg-red-400 flex lg:w-1/2 items-center justify-between w-full px-5'>
