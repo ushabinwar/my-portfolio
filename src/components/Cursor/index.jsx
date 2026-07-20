@@ -77,6 +77,7 @@ const Cursor = () => {
   return (
     <div
       ref={cursorRef}
+      id="custom-cursor"
       className="
         fixed
         top-0

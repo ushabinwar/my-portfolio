@@ -72,7 +72,7 @@ const Navbar = () => {
           <h1 className='text-4xl text-black font-normal font-sans '> Project</h1>
         </div>
         </Link>
-        <Link onClick={()=>setToggle(false)} to='experience'>
+        <Link onClick={()=>setToggle(false)} to='/experience'>
         <div className='flex gap-5 items-center'>
           <span className="w-8 text-right text-black text-3xl font-normal font-sans">04.</span>
           <h1 className='text-4xl text-black font-normal font-sans '> Experince</h1>

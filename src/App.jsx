@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -9,9 +9,45 @@ import Navbar from './components/Nav'
 import Cursor from './components/Cursor'
 import Aboutpage from './components/About/Aboutpage'
 import Contact from './components/Contact'
+import About from './components/About'
+import Lenis from "lenis";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollProgress from './components/ScrollProgress'
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 function App() {
-  
+
+  useEffect(() => {
+  const lenis = new Lenis({
+    // duration: 1.2,
+    // smoothWheel: true,
+    // touchMultiplier: 2,
+     duration: 1.2,
+  smoothWheel: true,
+  wheelMultiplier: 1,
+  touchMultiplier: 1.5,
+  infinite: false,
+  });
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  const update = (time) => {
+    lenis.raf(time * 1000);
+  };
+
+  gsap.ticker.add(update);
+  gsap.ticker.lagSmoothing(0);
+
+  return () => {
+    gsap.ticker.remove(update);
+    lenis.destroy();
+  };
+}, []);
+
 //   const [theme, setTheme] = useState("light");
 
 
@@ -68,14 +104,17 @@ function App() {
     >
       {theme === "light" ? "🌙 Dark" : "☀️ Light"}
     </button> */}
+    <div className='relative' >
          <Cursor/>
+         <ScrollProgress/>
          <Navbar/>
       <Routes>
      
       <Route path="/" element={<Home/>} />
-      <Route path="/about" element={<Aboutpage />} />
+      <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
+    </div>
 
     </>
       
