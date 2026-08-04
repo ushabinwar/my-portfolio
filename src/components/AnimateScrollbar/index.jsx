@@ -5,11 +5,21 @@ import { CiStar } from "react-icons/ci";
 
 const AnimateScrollbar = () => {
   const scrollerRef =  useRef(null)
+  const marqueeText = [
+  "Creative Developer",
+  "MERN Stack Engineer",
+  "Interactive Experiences",
+  "Smooth Animations",
+  "Clean UI",
+  "Responsive Design",
+  "Problem Solver",
+  "Open to Opportunities",
+];
     
   useGSAP(() => {
     gsap.to(scrollerRef.current, {
       x: "-50%",
-      duration: 20,
+      duration: 50,
       ease: "none",
       repeat: -1,
     });
@@ -35,32 +45,47 @@ const AnimateScrollbar = () => {
     //     <h1 className='inline-flex items-center  text-5xl gap-6' ><CiStar /> Hello</h1>
     // </div>
 
-    <div className="overflow-hidden border-y bg-secondary py-6">
+    <div className="overflow-hidden border-y bg-cream py-6">
   <div
     ref={scrollerRef}
     className="flex whitespace-nowrap w-max"
   >
     {/* First Copy */}
-    {[...Array(10)].map((_, i) => (
-      <h1
-        key={`first-${i}`}
-        className="inline-flex items-center gap-6 text-5xl mx-6"
-      >
-        <CiStar />
-        Hello
-      </h1>
-    ))}
-
+    {[...marqueeText, ...marqueeText].map((text, i) => (
+  <h1
+    key={i}
+    className="inline-flex items-center gap-10 text-5xl mx-6"
+  >
+     <svg width="36" height="16" viewBox="0 0 36 16" fill="none">
+    <path
+      d="M1 8H33M33 8L27 2M33 8L27 14"
+      stroke="#D4AF37"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+    {text}
+  </h1>
+))}
     {/* Second Copy */}
-    {[...Array(10)].map((_, i) => (
-      <h1
-        key={`second-${i}`}
-        className="inline-flex items-center gap-6 text-5xl mx-6"
-      >
-        <CiStar />
-        Hello
-      </h1>
-    ))}
+    {[...marqueeText, ...marqueeText].map((text, i) => (
+  <h1
+    key={i}
+    className="inline-flex items-center gap-6 text-5xl mx-6"
+  >
+     <svg width="36" height="16" viewBox="0 0 36 16" fill="none">
+    <path
+      d="M1 8H33M33 8L27 2M33 8L27 14"
+      stroke="#D4AF37"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+    {text}
+  </h1>
+))}
   </div>
 </div>
     

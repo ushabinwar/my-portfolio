@@ -84,7 +84,11 @@ const Cursor = () => {
         left-0
         h-5
         w-5
+        flex 
+        items-center
         rounded-full
+        justify-center
+        text-cream
       
         pointer-events-none
         border

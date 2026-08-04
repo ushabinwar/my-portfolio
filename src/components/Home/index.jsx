@@ -10,7 +10,7 @@ import Experience from '../Experience/Experience'
 const Home = () => {
   return (
     <div className='relative'>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Hero/>
       <AnimateScrollbar/>
       <Projects/>
