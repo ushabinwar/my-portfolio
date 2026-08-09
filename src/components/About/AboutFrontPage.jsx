@@ -17,7 +17,7 @@ const AboutFrontPage = () => {
         start: "top center",
         end: "top -100vh",
         scrub: true,
-        markers: true,
+        // markers: true,
         pin: ".container",
       },
     });

@@ -1,371 +1,431 @@
-// import React, { useEffect, useRef, useState } from "react";
-// import TimelineCard from "./TimelineCard";
-// import { useGSAP } from "@gsap/react";
-// import gsap from "gsap";
-// import ScrollTrigger from "gsap/ScrollTrigger";
-// import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-
-
-// gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // gsap.registerPlugin(ScrollTrigger);
 
-// const Experience = () => {
-//   const orbRef = useRef(null);
-// const pathRef = useRef(null);
-// const sectionRef = useRef(null);
-// const cardRefs = useRef([]);
-// const nodeRefs = useRef([]);
-//   const [nodes, setNodes] = useState([]);
-
-//   useGSAP(()=>{
-
-// gsap.set(cardRefs.current,{
-//     opacity:0,
-//     y:100,
-//     scale:.9
-// })
-
-// })
-// useGSAP(()=>{
-
-// cardRefs.current.forEach((card)=>{
-
-// gsap.to(card,{
-
-// opacity:1,
-// y:0,
-// scale:1,
-
-// duration:.8,
-
-// scrollTrigger:{
-
-// trigger:card,
-
-// start:"top 80%",
-
-// toggleActions:"play none none reverse"
-
-// }
-
-// })
-
-// })
-
-// })
-
-//   useGSAP(() => {
-//   const path = pathRef.current;
-
-//   const length = path.getTotalLength();
-
-//   gsap.set(path, {
-//     strokeDasharray: length,
-//     strokeDashoffset: length,
-//   });
-
-//   gsap.to(path, {
-//     strokeDashoffset: 0,
-//     ease: "none",
-//     scrollTrigger: {
-//       trigger: path,
-//       start: "top 80%",
-//       end: "bottom 20%",
-//       scrub: true,
-//     },
-//   });
-// });
-
-//   useEffect(() => {
-//   const path = document.getElementById("timelinePath");
-
-//   if (!path) return;
-
-//   const totalLength = path.getTotalLength();
-
-//   const points = [];
-
-//   const percentages = [0.15, 0.4, 0.7];
-
-//   percentages.forEach((p) => {
-//     const point = path.getPointAtLength(totalLength * p);
-
-//     points.push({
-//       x: point.x,
-//       y: point.y,
-//     });
-//   });
-
-//   setNodes(points);
-// }, []);
-//   const experienceData = [
-//     {
-//       id: 1,
-//       year: "2025",
-//       title: "MERN Stack Intern",
-//       company: "Medorn Ventures Pvt. Ltd.",
-//       duration: "Jan 2025 - Oct 2025",
-//       description:
-//         "Worked on ERP and HRMS software using React, Node.js, Express and MongoDB.",
-//       top: "200px",
-//     side: "left",
-//       nodeTop: "260px",
-//     },
-//     {
-//       id: 2,
-//       year: "2025",
-//       title: "ERP & HRMS",
-//       company: "Live Projects",
-//       duration: "10 Months",
-//       description:
-//         "Built dashboards, forms, reusable components and REST APIs.",
-//             top: "650px",
-//     side: "right",
-//     nodeTop: "790px",
-
-//     },
-//     {
-//       id: 3,
-//       year: "2026",
-//       title: "Frontend Developer",
-//       company: "Personal Projects",
-//       duration: "Present",
-//       description:
-//         "Building interactive portfolios using React, GSAP and Three.js.",
-//            top: "1150px",
-//     side: "left",
-//      nodeTop: "1340px",
-//     },
-//   ];
-
-//   useGSAP(() => {
-
-//     gsap.to(orbRef.current, {
-
-//         motionPath: {
-
-//             path: pathRef.current,
-//             align: pathRef.current,
-//             alignOrigin: [0.5,0.5],
-
-//         },
-
-//         ease:"none",
-
-//         scrollTrigger:{
-
-//             trigger:sectionRef.current,
-
-//             start:"top top",
-
-//             end:"bottom bottom",
-
-//             scrub:true
-
-//         }
-
-//     });
-
-// });
-
-// // animate static node
-// useGSAP(() => {
-//   nodeRefs.current.forEach((node) => {
-//     if (!node) return;
-
-//     gsap.fromTo(
-//       node,
-//       {
-//         attr: { r: 8 },
-//       },
-//       {
-//         attr: { r: 14 },
-//         duration: 0.5,
-//         yoyo: true,
-//         repeat: -1,
-//         ease: "power1.inOut",
-//       }
-//     );
-//   });
-// }, []);
-
-
-//   return (
-//     <section ref={sectionRef} className="relative w-full min-h-[220vh] bg-cream text-white overflow-hidden">
-//       {/* Heading */}
-//       <h1 className="text-5xl uppercase lg:text-6xl text-center py-10 lg:py-16 font-[FjallaOne]">
-//         Experience
-//       </h1>
-
-//       {/* SVG Timeline */}
-//      <svg
-//   className="absolute left-1/2 top-40 -translate-x-1/2 z-0"
-//   width="500"
-//   height="1800"
-//   viewBox="0 0 500 1800"
-// >
-//   {/* Glow Filter */}
-//   <defs>
-//     <filter id="glow">
-//       <feGaussianBlur stdDeviation="8" result="coloredBlur" />
-//       <feMerge>
-//         <feMergeNode in="coloredBlur" />
-//         <feMergeNode in="SourceGraphic" />
-//       </feMerge>
-//     </filter>
-//   </defs>
-
-//   {/* Path */}
-//   <path
-//     ref={pathRef}
-//     id="timelinePath"
-//     d="
-//       M250 0
-//       C420 200 80 350 250 550
-//       C420 750 80 900 250 1100
-//       C420 1300 80 1450 250 1650
-//     "
-//     stroke="#AEB784"
-//     strokeWidth="4"
-//     fill="none"
-//   />
-
-//   {/* Static Timeline Nodes */}
-//   {nodes.map((point, index) => (
-//     <circle
-//       key={index}
-//        ref={(el) => (nodeRefs.current[index] = el)}
-//       cx={point.x}
-//       cy={point.y}
-//       r="8"
-//       fill="#AEB784"
-//     />
-//   ))}
-
-//   {/* Moving Orb */}
-//   <circle
-//     ref={orbRef}
-//     cx="250"
-//     cy="0"
-//     r="12"
-//     fill="#AEB784"
-//     filter="url(#glow)"
-//   />
-// </svg>
-
-//       {/* Timeline Cards */}
-//       <div className="relative z-10 w-[90%]  h-[2200px] max-w-7xl mx-auto mt-32 ">
-//         {experienceData.map((item, index) => (
-//           <TimelineCard
-//             key={item.id}
-//             item={item}
-//             index={index}
-//             ref={(el)=> cardRefs.current[index]=el}
-//           />
-//         ))}
-//       </div>
-
-//     {/* {nodes.map((node, index) => (
-//   <div
-//     key={index}
-//     className="absolute z-20"
-//     style={{
-//       left: `${node.x}px`,
-//       top: `${node.y}px`,
-//       transform: "translate(-50%, -50%)",
-//     }}
-//   >
-//     <div className="w-5 h-5 rounded-full bg-[#AEB784] shadow-[0_0_20px_#AEB784]" />
-//   </div>
-// ))} */}
-//     </section>
-//   );
-// };
-
-// export default Experience;
-
-import React, { useRef } from "react";
-import TimelineSVG from "./TimeLineSVG";
-import TimelineCard from "./TimelineCard";
-import experienceData from "./experienceData";
-// import useTimeline from "./useTimeline";
+const experiences = [
+  {
+    number: "01",
+    year: "2025",
+    role: "MERN STACK DEVELOPER",
+    company: "Medorn Ventures",
+    duration: "JAN 2025 — OCT 2025",
+    description:
+      "Worked on HRMS and ERP applications, building interfaces and backend functionality for real-world business applications.",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+  },
+  // {
+  //   number: "02",
+  //   year: "2024",
+  //   role: "FULL STACK DEVELOPER",
+  //   company: "Personal Projects",
+  //   duration: "2024",
+  //   description:
+  //     "Built multiple full-stack applications while improving frontend, backend, API integration and database development.",
+  //   technologies: ["React", "Node.js", "MongoDB", "GSAP"],
+  // },
+  {
+    number: "02",
+    year: "2023",
+    role: "MERN STACK LEARNER",
+    company: "Sheryians Coding School",
+    duration: "MAR 2023 — MAY 2024",
+    description:
+      "Developed a strong foundation in JavaScript and the MERN stack while building practical projects.",
+    technologies: ["JavaScript", "React", "Node.js", "MongoDB"],
+  },
+];
 
 const Experience = () => {
-  // ==========================
-  // Section Ref
-  // Used by GSAP ScrollTrigger
-  // ==========================
   const sectionRef = useRef(null);
+  const headingContainerRef = useRef(null);
 
-  // ==========================
-  // SVG Path Ref
-  // ==========================
-  const pathRef = useRef(null);
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
 
-  // ==========================
-  // Moving Orb Ref
-  // ==========================
-  const orbRef = useRef(null);
+      mm.add("(min-width: 1024px)", () => {
+        ScrollTrigger.create({
+          trigger: sectionRef.current,
+          pin: headingContainerRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          markers: true,
+        });
+      });
 
-  // ==========================
-  // Timeline Nodes
-  // ==========================
-  const nodeRefs = useRef([]);
-
-  // ==========================
-  // Timeline Cards
-  // ==========================
-  const cardRefs = useRef([]);
-
-  // ==========================
-  // Custom Hook
-  // Handles all GSAP animations
-  // ==========================
-  // useTimeline({
-  //   sectionRef,
-  //   pathRef,
-  //   orbRef,
-  //   nodeRefs,
-  //   cardRefs,
-  // });
+      return () => mm.revert();
+    },
+    {
+      scope: sectionRef,
+    },
+  );
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative w-full min-h-[220vh] bg-cream overflow-hidden"
-    >
-      {/* ==========================
-          Section Heading
-      ========================== */}
+    <section ref={sectionRef} className="bg-cream text-[#111]">
+      <div
+        className="
+          grid
+          min-h-screen
+          max-w-[1600px]
+          grid-cols-1
+          px-5
+          py-24
+          sm:px-8
+          sm:py-28
+          md:px-10
+          lg:grid-cols-2
+          lg:px-16
+          lg:py-32
 
-      <h1 className="text-5xl lg:text-6xl text-center uppercase py-10 lg:py-16 font-[FjallaOne]">
-        Experience
-      </h1>
+          xl:px-24
+        "
+      >
 
-      {/* ==========================
-          Timeline SVG
-      ========================== */}
+        {/* left side */}
+        <div
+          ref={headingContainerRef}
+          className="
+            h-fit
+            pr-0
+            lg:pr-16
+            xl:pr-24"
+          >
+          {/* Section number */}
 
-      <TimelineSVG
-        pathRef={pathRef}
-        orbRef={orbRef}
-        nodeRefs={nodeRefs}
-      />
+          <div className="mb-8 flex items-center gap-4">
+            <span className="h-px w-8 bg-[#111]" />
 
-      {/* ==========================
-          Timeline Cards
-      ========================== */}
+            <span
+              className="
+                text-[10px]
+                uppercase
+                tracking-[0.3em]
+                opacity-50
+                sm:text-xs
+                font-[mangoGro] 
+              "
+            >
+              / Experience
+            </span>
+          </div>
 
-      <div className="relative z-10 h-[2200px] w-[90%] max-w-7xl mx-auto mt-32">
-        {experienceData.map((item, index) => (
-          <TimelineCard
-            key={item.id}
-            ref={(el) => (cardRefs.current[index] = el)}
-            item={item}
-            top={`${250 + index * 550}px`}
+          {/* Main heading */}
+
+          <h2
+            className="
+              text-[16vw]
+              font-black
+              uppercase
+              leading-[0.78]
+              tracking-[-0.075em]
+
+              sm:text-[15vw]
+
+              md:text-[13vw]
+
+              lg:text-[5vw]
+            "
+          >
+            Experience
+          </h2>
+
+          {/* Small statement */}
+
+          <div
+            className="
+              mt-10
+              max-w-sm
+
+              lg:mt-16
+            "
+          >
+            <p
+              className="
+                text-sm
+                leading-relaxed
+                opacity-50
+
+                sm:text-base
+              "
+            >
+              A collection of places, projects and experiences that shaped the
+              way I build for the web.
+            </p>
+          </div>
+        </div>
+
+        {/*RIGHT SIDE*/}
+
+        <div
+          className="
+            relative
+            mt-24
+            lg:mt-0
+            lg:flex
+            lg:min-h-screen
+            lg:items-center
+          "
+        >
+          {/* Timeline line */}
+
+          <div
+            className="
+              absolute
+              left-[7px]
+              top-0
+              bottom-0
+              w-px
+              // bg-[#111]/15
+              bg-black
+
+              lg:left-0
+              lg:top-[0%]
+              lg:bottom-[15%]
+            "
           />
-        ))}
+
+          {/* Experiences */}
+
+          <div
+            className="
+              flex
+              w-full
+              flex-col
+              gap-20
+              pl-10
+
+              sm:gap-24
+
+              md:pl-12
+
+              lg:gap-32
+              lg:pl-14
+
+              xl:pl-16
+            
+            "
+          >
+            {experiences.map((experience, index) => (
+              <article
+                key={experience.number}
+                className="
+                  group
+                  relative
+                  max-w-2xl
+                
+                "
+              >
+                {/* Timeline dot */}
+
+                <div
+                  className="
+                    absolute
+                    -left-[40px]
+                    top-1
+                    flex
+                    h-4
+                    w-4
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#111]
+                    bg-[#f2eee6]
+
+                    md:-left-[48px]
+
+                    lg:-left-[56px]
+
+                    xl:-left-[72px]
+                  "
+                >
+                  <span
+                    className={`
+                      h-1.5
+                      w-1.5
+                      rounded-full
+                      bg-[#111]
+                      ${index === 0 ? "scale-125" : "opacity-30"}
+                    `}
+                  />
+                </div>
+
+                {/* Top information */}
+
+                <div
+                  className="
+                    mb-8
+                    flex
+                    items-center
+                    justify-between
+                    gap-4
+                  "
+                >
+                  <span
+                    className="
+                      text-[10px]
+                      font-medium
+                      uppercase
+                      tracking-[0.25em]
+                      opacity-40
+
+                      sm:text-xs
+                    "
+                  >
+                    {experience.number}
+                  </span>
+
+                  <span
+                    className="
+                      text-[10px]
+                      font-medium
+                      uppercase
+                      tracking-[0.25em]
+                      opacity-40
+
+                      sm:text-xs
+                    "
+                  >
+                    {experience.year}
+                  </span>
+                </div>
+
+                {/* Role */}
+
+                <h3
+                  className="
+                    max-w-xl
+                    text-[11vw]
+                    font-black
+                    uppercase
+                    leading-[0.90]
+                    tracking-[-0.065em]
+
+                    sm:text-[8vw]
+
+                    md:text-[6vw]
+
+                    lg:text-[4.5vw]
+
+                    xl:text-[4vw]
+                  "
+                >
+                  {experience.role}
+                </h3>
+
+                {/* Company */}
+
+                <div
+                  className="
+                    mt-7
+                    flex
+                    flex-col
+                    gap-1
+
+                    sm:flex-row
+                    sm:items-center
+                    sm:gap-4
+                  "
+                >
+                  <h4
+                    className="
+                      text-lg
+                      font-medium
+
+                      sm:text-xl
+
+                      md:text-2xl
+                    "
+                  >
+                    {experience.company}
+                  </h4>
+
+                  <span
+                    className="
+                      hidden
+                      h-1
+                      w-1
+                      rounded-full
+                      bg-[#111]/40
+
+                      sm:block
+                    "
+                  />
+
+                  <span
+                    className="
+                      text-[10px]
+                      uppercase
+                      tracking-[0.2em]
+                      opacity-40
+
+                      sm:text-xs
+                    "
+                  >
+                    {experience.duration}
+                  </span>
+                </div>
+
+                {/* Description */}
+
+                <p
+                  className="
+                    mt-7
+                    max-w-lg
+                    text-sm
+                    leading-[1.7]
+                    opacity-50
+
+                    sm:mt-9
+                    sm:text-base
+                  "
+                >
+                  {experience.description}
+                </p>
+
+                {/* Technologies */}
+
+                <div
+                  className="
+                    mt-8
+                    flex
+                    flex-wrap
+                    gap-2
+
+                    sm:mt-10
+                  "
+                >
+                  {experience.technologies.map((technology) => (
+                    <span
+                      key={technology}
+                      className="
+                        border
+                        border-[#111]/15
+                        px-3
+                        py-2
+                        text-[9px]
+                        uppercase
+                        tracking-[0.15em]
+                        transition-all
+                        duration-300
+
+                        group-hover:border-[#111]/40
+
+                        sm:px-4
+                        sm:text-[10px]
+                      "
+                    >
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
