@@ -147,7 +147,7 @@ const Aboutpage = () => {
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <div ref={headingRef} className="mb-10">
             <div className="overflow-hidden">
-              <h1 className="text-right bg-red-300 text-4xl md:text-5xl lg:text-6xl font-[voyage] leading-none">
+              <h1 className="text-right text-4xl md:text-5xl lg:text-6xl font-[voyage] leading-none">
                 The
               </h1>
             </div>
@@ -165,7 +165,7 @@ const Aboutpage = () => {
           </div>
 
           <div ref={textRef}>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-500 font-[FjallaOne] text-right">
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-background font-[FjallaOne] text-right">
               I'm a developer who enjoys turning ideas into interactive web
               experiences. I like clean code, thoughtful design, and animations
               that make a website feel alive. When I'm not building projects,
@@ -174,7 +174,7 @@ const Aboutpage = () => {
               exactly as planned.
             </p>
 
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-500 font-[FjallaOne] text-right mt-6">
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-background font-[FjallaOne] text-right mt-6">
               I'm a developer who enjoys turning ideas into interactive web
               experiences. I like clean code, thoughtful design, and animations
               that make a website feel alive. When I'm not building projects,

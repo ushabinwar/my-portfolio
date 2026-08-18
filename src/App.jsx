@@ -15,6 +15,8 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollProgress from "./components/ScrollProgress";
+import ExperiencePage from "./components/Experience";
+import Projects from "./components/Projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,6 +112,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/experience" element={<ExperiencePage/>} />
+          <Route path="/project" element={<Projects/>} />
         </Routes>
       </div>
     </>

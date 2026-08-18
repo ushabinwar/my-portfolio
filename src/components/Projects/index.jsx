@@ -1,12 +1,16 @@
-import React from 'react'
-import ProjectSection from './ProectSection'
+import React from "react";
+import ProjectSection from "./ProectSection";
+import Footer from "../Footer";
+import ProjectFrontPage from "./ProjectFrontPage";
 
 const Projects = () => {
   return (
     <div>
-        <ProjectSection/>
+      <ProjectFrontPage />
+      <ProjectSection />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

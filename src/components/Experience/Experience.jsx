@@ -52,7 +52,7 @@ const Experience = () => {
           pin: headingContainerRef.current,
           start: "top top",
           end: "bottom bottom",
-          markers: true,
+          
         });
       });
 
@@ -63,6 +63,35 @@ const Experience = () => {
     },
   );
 
+  useGSAP(() => {
+    gsap.to(sectionRef.current, {
+      backgroundColor: "#000",
+      color:"#F8F3E1",
+  
+      ease: "power2.inOut",
+  
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top -20%",
+        end: "top 20%",
+        scrub: 1.5,
+        // markers: true,
+      },
+    });
+    gsap.to(".timeline", {
+    backgroundColor: "#F8F3E1", // timeline ka different color
+
+    ease: "power2.inOut",
+
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top -20%",
+      end: "top 20%",
+      scrub: 1.5,
+    },
+  });
+  });
+  
   return (
     <section ref={sectionRef} className="bg-cream text-[#111]">
       <div
@@ -172,7 +201,7 @@ const Experience = () => {
           {/* Timeline line */}
 
           <div
-            className="
+            className=" timeline
               absolute
               left-[7px]
               top-0
@@ -403,7 +432,7 @@ const Experience = () => {
                       key={technology}
                       className="
                         border
-                        border-[#111]/15
+                        border-gray-400
                         px-3
                         py-2
                         text-[9px]
@@ -412,7 +441,7 @@ const Experience = () => {
                         transition-all
                         duration-300
 
-                        group-hover:border-[#111]/40
+                        group-hover:border-gray/10
 
                         sm:px-4
                         sm:text-[10px]
