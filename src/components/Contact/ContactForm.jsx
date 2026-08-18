@@ -14,6 +14,8 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
 
+
+
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -689,7 +691,7 @@ const ContactForm = () => {
             title="name"
             placeholder="Name"
             name="from_name"
-            autoFocus
+            required
           />
           <input
             className='w-full px-4 py-4 rounded-2xl border border-dashed border-black text-xl mt-3 lg:mt-0  placeholder:text-gray-400
@@ -702,6 +704,7 @@ const ContactForm = () => {
             title="email"
             placeholder="Email"
             name="from_email"
+            required
           />
         </div>
         <textarea
@@ -715,6 +718,7 @@ const ContactForm = () => {
           name="message"
           rows={8}
           placeholder="Message"
+          required
         ></textarea>
 
         <button
