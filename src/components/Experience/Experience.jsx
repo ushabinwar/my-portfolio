@@ -145,7 +145,7 @@ const Experience = () => {
 
           <h2
             className="
-              text-[16vw]
+              text-[13vw]
               font-black
               uppercase
               leading-[0.78]

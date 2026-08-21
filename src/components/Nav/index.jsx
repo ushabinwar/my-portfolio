@@ -71,8 +71,10 @@ const Navbar = () => {
   console.log(toggle, "toggle satate");
   return (
     <>
-      <div className=" z-10 w-full px-5 py-4 flex justify-between  fixed">
-        <h5 className="font-[mangoGro] text-2xl">ub</h5>
+      <div className=" z-[99] w-full px-10 py-4 flex justify-between  fixed">
+        <h5 className="font-[mangoGro] text-4xl text-black mix-blend-difference">
+          UB
+        </h5>
         <div
           onClick={MenuClick}
           className="relative w-12 h-12 rounded-full bg-black flex items-center justify-center"
@@ -91,7 +93,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         ref={navRef}
         className={`h-screen z-6 w-full  text-cream bg-secondary fixed flex flex-col justify-center items-center  ${toggle ? "block" : "hidden"} `}
       >
@@ -107,7 +109,7 @@ const Navbar = () => {
               onClick={() => setToggle(false)}
               className="group w-fit"
             >
-              <div className="flex items-center gap-5  w-fit overflow-hidden font-[voyage] font-bold  ">
+              <div className="flex items-center gap-5 w-fit overflow-hidden font-[voyage]  font-bold  ">
                 <span className="w-8 text-right text-3xl font-normal  opacity-70">
                   {item.id}
                 </span>
@@ -117,9 +119,87 @@ const Navbar = () => {
               <div className="h-1 w-0 mt-1 bg-cream rounded-full transition-all duration-500 ease-in-out group-hover:w-full group-focus-within:w-full"></div>
             </Link>
           ))}
-        </div>
+        </div> */}
 
-        {/* <div className="bg-red-400 flex lg:w-1/2 items-center justify-between w-full px-5">
+      <div
+        ref={navRef}
+        className={`fixed inset-0 z-10 h-screen w-full bg-black text-cream
+    ${toggle ? "flex" : "hidden"}
+    flex-col justify-center px-6 md:px-12 lg:px-20`}
+      >
+        {/* Menu links */}
+        <div ref={linkRef} className="flex flex-col gap-3 md:gap-4">
+          {navLinks.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setToggle(false)}
+              className="nav-link group w-fit"
+            >
+              <div className="flex items-center gap-4 md:gap-8">
+                {/* Number */}
+                <span className="text-sm md:text-base opacity-40 font-[FjallaOne]">
+                  {item.id}
+                </span>
+
+                {/* Name + Arrow */}
+                <div className="flex items-center overflow-hidden">
+                  <h1
+                    className="
+                font-[MangoGro]
+                uppercase
+                text-6xl
+                sm:text-7xl
+                md:text-8xl
+                lg:text-[7vw]
+                leading-[0.9]
+                transition-transform
+                duration-500
+                ease-out
+               -tracking-normal
+                group-hover:translate-x-3
+              "
+                  >
+                    {item.name}
+                  </h1>
+
+                  <span
+                    className="
+                ml-3
+                text-3xl md:text-5xl
+                opacity-0
+                -translate-x-5
+                transition-all
+                duration-500
+                group-hover:opacity-100
+                group-hover:translate-x-0
+              "
+                  >
+                    ↗
+                  </span>
+                </div>
+              </div>
+
+              {/* underline */}
+              <div
+                className="
+            ml-8 md:ml-14
+            mt-2
+            lg:mt-0
+            h-[2px]
+            w-0
+            bg-cream
+            transition-all
+            duration-500
+            group-hover:w-full
+          "
+              />
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* <div className="bg-red-400 flex lg:w-1/2 items-center justify-between w-full px-5">
           <div className=" flex gap-3">
             <a
               href="https://www.linkedin.com/in/usha-binwar-4a24b924a/"
@@ -175,7 +255,6 @@ const Navbar = () => {
           </div>
           <h6>ushabinwar@gmail.com</h6>
         </div> */}
-      </div>
     </>
   );
 };

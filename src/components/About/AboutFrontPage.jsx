@@ -86,7 +86,7 @@ const AboutFrontPage = () => {
 
         <div className="row3  overflow-hidden ">
           <h1 className="sm:text-[13vw] text-[20vw] leading-20 text-center md:text-[12vw] md:leading-36 font-[MangoGro]  lg:text-[10vw] font-black uppercase">
-            Know About Me
+            Know <span className="text-[#B58A3C]">About Me</span>
           </h1>
         </div>
       </div>
