@@ -71,7 +71,7 @@ const Navbar = () => {
   console.log(toggle, "toggle satate");
   return (
     <>
-      <div className=" z-[99] w-full px-10 py-4 flex justify-between  fixed">
+      <div className=" z-[99] w-full px-5 lg:px-10 py-4 flex justify-between  fixed">
         <h5 className="font-[mangoGro] text-4xl text-black mix-blend-difference">
           UB
         </h5>

@@ -65,29 +65,75 @@ const ProjectSection = () => {
     },
   ];
 
-  
-  
-
   useGSAP(() => {
-  const cards = gsap.utils.toArray(".project-card");
+    const cards = gsap.utils.toArray(".project-card");
 
-  cards.forEach((card) => {
-    gsap.from(card, {
-      y: 100,
-      opacity: 0,
-      duration: 0.8,
+    cards.forEach((card) => {
+      gsap.from(card, {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
 
-      scrollTrigger: {
-        trigger: card,
-        start: "top 90%",
-        end: "top 70%",
-        scrub: 2,
-        markers: true,
-      },
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          end: "top 70%",
+          scrub: 2,
+          markers: true,
+        },
+      });
     });
-  });
-}, []);
+  }, []);
 
+  const mouseEnter = (e) => {
+    const cursor = document.querySelector("#custom-cursor");
+
+    console.log("enter mouse");
+
+    const isMobile = window.innerWidth < 768;
+
+    gsap.to(cursor, {
+      width: isMobile ? "14vh" : "20vh",
+      height: isMobile ? "14vh" : "20vh",
+      duration: 0.5,
+      ease: "power3.out",
+      border: "none",
+    });
+
+    cursor.style.backgroundColor = "black";
+    cursor.innerHTML = "<p>Project</p>";
+
+    const img = e.currentTarget.querySelector("img");
+
+    gsap.to(img, {
+      scale: 1.09,
+      duration: 3,
+      ease: "power3.out",
+    });
+  };
+
+  const mouseLeave = (e) => {
+    const cursor = document.querySelector("#custom-cursor");
+
+    gsap.to(cursor, {
+      width: "20px",
+      height: "20px",
+      borderRadius: "50%",
+      duration: 0.5,
+      ease: "power3.out",
+    });
+
+    cursor.style.backgroundColor = "";
+    cursor.innerHTML = "";
+
+    const img = e.currentTarget.querySelector("img");
+
+    gsap.to(img, {
+      scale: 1,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  };
   return (
     <div className="min-h-screen w-full bg-cream py-10">
       <h1 className="text-5xl text-center py-16 font-[FjallaOne]">Projects</h1>
@@ -95,12 +141,15 @@ const ProjectSection = () => {
         {projectData?.map((data, index) => {
           return (
             <div
-              
               key={index}
               className="project-card mt-18  text-black  m-3 shadow-xl rounded-xl px-3 md:px-10 md:py-8 md:flex md:items-center py-8    "
             >
               <div className="left  md:w-[50%]   ">
-                <div className="h-60 w-full md:h-84 md:w-140 overflow-hidden">
+                <div
+                  onMouseEnter={mouseEnter}
+                  onMouseLeave={mouseLeave}
+                  className="h-60 w-full md:h-84 md:w-140 overflow-hidden"
+                >
                   <img
                     className="h-full w-full object-center "
                     src={data.image}
