@@ -66,8 +66,8 @@ const Hobbies = () => {
 
   return (
     <div className="min-h-screen w-full bg-cream px-4 py-10 md:px-22">
-      <h1 className="text-2xl font-bold font-[FjallaOne]">
-        SOMETHING INTERESTIN ABOUT ME OTHER THAT TECK
+      <h1 className="text-2xl font-bold uppercase font-[FjallaOne]">
+        Something interesting about me other than tech
       </h1>
 
       <div className=" mt-20 ">

@@ -55,7 +55,7 @@ const AboutCounter = () => {
       <div className="w-full mx-auto px-3">
         <div className="flex gap-5 justify-evenly md:px:20 text-center">
           {stats.map((item, index) => (
-            <div className="hover:text-secondary" key={index}>
+            <div className="hover:text-[#B58A3C]" key={index}>
               <h1
                 ref={(el) => (numberRefs.current[index] = el)}
                 className="text-4xl font-semibold md:text-7xl tracking-tight"
