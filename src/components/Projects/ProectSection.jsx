@@ -79,7 +79,6 @@ const ProjectSection = () => {
           start: "top 90%",
           end: "top 70%",
           scrub: 2,
-          markers: true,
         },
       });
     });

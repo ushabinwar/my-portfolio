@@ -154,11 +154,7 @@ const MouseMoveAnimation = () => {
       {/* --------------------------------
           SMALL LABEL
       -------------------------------- */}
-      <div className="mb-20 flex items-center justify-between text-sm uppercase tracking-widest">
-        <span>About Me</span>
-
-        <span>01 — 06</span>
-      </div>
+      
 
       {/* --------------------------------
           TITLE

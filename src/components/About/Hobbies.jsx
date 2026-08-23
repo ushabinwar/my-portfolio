@@ -65,7 +65,7 @@ const Hobbies = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-cream px-4 py-10 md:px-22">
+    <div className="min-h-screen w-full  bg-cream px-4 py-10 md:px-22">
       <h1 className="text-2xl font-bold uppercase font-[FjallaOne]">
         Something interesting about me other than tech
       </h1>
@@ -91,7 +91,7 @@ const Hobbies = () => {
 
               </div>
 
-              <div className="relative z-10 flex justify-between px-5 py-6 md:px-12 md:py-8 transition-colors duration-500 group-hover:text-white">
+              <div className="relative z-4 flex justify-between px-5 py-6 md:px-12 md:py-8 transition-colors duration-500 group-hover:text-white">
                 <h1 className="text-3xl w-[40%] flex items-center font-[FjallaOne]">
                   0{hob?.id}
                 </h1>

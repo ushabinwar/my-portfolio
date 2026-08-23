@@ -26,7 +26,6 @@ const AboutFrontPage = () => {
           start: "top 5%",
           end: "bottom 20%",
           scrub: 2,
-          markers: true,
         },
       });
 
