@@ -67,7 +67,7 @@ const Footer = () => {
     {
       name: "LINKEDIN",
       icon: <CiLinkedin className="text-2xl" />,
-      link: "https://linkedin.com/",
+      link: "https://www.linkedin.com/in/usha-binwar-4a24b924a/",
     },
     {
       name: "INSTAGRAM",
@@ -77,7 +77,7 @@ const Footer = () => {
     {
       name: "GITHUB",
       icon: <FaGithub className="text-2xl" />,
-      link: "https://github.com/",
+      link: "https://github.com/ushabinwar",
     },
   ];
 
@@ -101,10 +101,10 @@ const Footer = () => {
         {/* Left Side */}
         <div className="md:w-1/2 lg:w-1/3 ">
           <p className="font-md text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            beatae odit voluptatum totam tempore, quis quam ut praesentium sed
-            consectetur ullam molestias deleniti commodi quo reprehenderit ipsum
-            dolorum possimus. Commodi!
+            Have an idea you'd like to bring to life? I'm always open to
+            interesting projects and creative collaborations. Let's combine
+            ideas, build something meaningful, and make something we're both
+            proud of.
           </p>
 
           <Link to="/contact">
@@ -121,9 +121,12 @@ const Footer = () => {
         {/* Right Side */}
         <div className="mt-10 md:mt-0 md:w-1/2 lg:w-1/3 ">
           <p className="font-md text-sm">
-            You can reach me through any of my socials below or drop me a
+            {/* You can reach me through any of my socials below or drop me a
             message. I'd be happy to connect, collaborate, or just chat about
-            new ideas.
+            new ideas. */}
+            You can reach me through any of my socials below or simply drop me a
+            message. I’d be happy to connect, collaborate, exchange ideas, or
+            just have a conversation about something new.
           </p>
 
           <div className="flex flex-wrap gap-3 md:gap-5 mt-7">

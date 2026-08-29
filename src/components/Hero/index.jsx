@@ -91,8 +91,9 @@ const Hero = () => {
         </div>
 
         <p className="hero-para text-center mt-3 w-full md:w-1/2  m-auto">
-          Designing and developing interactive web experiences that are fast,
-          beautiful, and built with purpose.
+          {/* Designing and developing interactive web experiences that are fast,
+          beautiful, and built with purpose. */}
+          Designing and developing interactive web experiences that are fast, beautiful, and built with purpose — crafted through thoughtful design, smooth motion, and clean code.
         </p>
         <div className="flex justify-center mt-10">
           <Link to="/contact">

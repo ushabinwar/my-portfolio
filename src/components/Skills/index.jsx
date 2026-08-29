@@ -269,7 +269,7 @@ const Skills = () => {
       className="w-full min-h-screen bg-cream  px-5  py-14 md:px-10"
     >
       {/* HEADER */}
-      <div className="mb-20 ">
+      <div className="mb-28 mt-16 ">
         {/* <p className="mb-4 text-sm tracking-[0.25em]">
           (04)
         </p> */}

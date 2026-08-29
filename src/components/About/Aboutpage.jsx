@@ -175,12 +175,20 @@ const Aboutpage = () => {
             </p>
 
             <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-background font-[FjallaOne] text-right mt-6">
-              I'm a developer who enjoys turning ideas into interactive web
+              {/* I'm a developer who enjoys turning ideas into interactive web
               experiences. I like clean code, thoughtful design, and animations
               that make a website feel alive. When I'm not building projects,
               I'm usually exploring new technologies, refining my portfolio, or
               chasing that satisfying moment when everything finally works
-              exactly as planned.
+              exactly as planned. */}
+              My journey has been shaped by curiosity, experimentation, and constantly asking, what could this become?
+From real-world applications to GSAP, animation, and creative frontend experiences, I’m always exploring new ways to build.
+
+            </p>
+
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-background font-[FjallaOne] text-right mt-6">
+           
+"I’m not just here to make things work — I want to create work that people remember."
             </p>
           </div>
         </div>

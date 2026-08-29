@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 const ProjectSection = () => {
   const projectData = [
     {
-      title: "Insta gram clone",
+      title: "Internshala Clone",
       descripion:
         " Non Non nescsperiores nihil,Non nesciunt debitis qui reiciendis. Numquam asperiores nihil,nesciunt debitis qui reiciendis. Numquam asperiores nihil, pariatur quis facilis Cum molestias nam consequuntur, dolore id tenetur?",
       techStack: [
@@ -24,45 +24,43 @@ const ProjectSection = () => {
         "express",
       ],
       lineLink: "http://google.com",
-      image:
-        "https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg?fit=fill&w=600&h=400",
+      image:""
     },
     {
-      title: "fatfish website clone awwards",
+      title: "fatfish Awwards Website",
+      descripion:
+        " Non nesciunt debitis qui reiciendis. Numquam asperiores nihil, pariatur quis facilis Cum molestias nam consequuntur, dolore id tenetur?",
+      techStack: ["html", "java", "c", "node", "express"],
+      lineLink: "http://google.com",
+      image: "/public/fatfish.png",
+    }, 
+    {
+      title: "Hello Awwards Website",
       descripion:
         " Non nesciunt debitis qui reiciendis. Numquam asperiores nihil, pariatur quis facilis Cum molestias nam consequuntur, dolore id tenetur?",
       techStack: ["html", "java", "c", "node", "express"],
       lineLink: "http://google.com",
       image:
-        "https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg?fit=fill&w=600&h=400",
+        "/public/wethinkelastic.png",
     },
     {
-      title: "hello website",
+      title: "EJ Studio Awwards Website",
       descripion:
         " Non nesciunt debitis qui reiciendis. Numquam asperiores nihil, pariatur quis facilis Cum molestias nam consequuntur, dolore id tenetur?",
       techStack: ["html", "java", "c", "node", "express"],
       lineLink: "http://google.com",
       image:
-        "https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg?fit=fill&w=600&h=400",
+        "/public/ejstudio.png",
     },
-    {
-      title: "career hub",
-      descripion:
-        " Non nesciunt debitis qui reiciendis. Numquam asperiores nihil, pariatur quis facilis Cum molestias nam consequuntur, dolore id tenetur?",
-      techStack: ["html", "java", "c", "node", "express"],
-      lineLink: "http://google.com",
-      image:
-        "https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg?fit=fill&w=600&h=400",
-    },
-    {
-      title: "chat application",
-      descripion:
-        " Non nesciunt debitis qui reiciendis. Numquam asperiores nihil, pariatur quis facilis Cum molestias nam consequuntur, dolore id tenetur?",
-      techStack: ["html", "java", "c", "node", "express"],
-      lineLink: "http://google.com",
-      image:
-        "https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg?fit=fill&w=600&h=400",
-    },
+    // {
+    //   title: "chat application",
+    //   descripion:
+    //     " Non nesciunt debitis qui reiciendis. Numquam asperiores nihil, pariatur quis facilis Cum molestias nam consequuntur, dolore id tenetur?",
+    //   techStack: ["html", "java", "c", "node", "express"],
+    //   lineLink: "http://google.com",
+    //   image:
+    //     "https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg?fit=fill&w=600&h=400",
+    // },
   ];
 
   useGSAP(() => {
@@ -106,7 +104,7 @@ const ProjectSection = () => {
 
     gsap.to(img, {
       scale: 1.09,
-      duration: 3,
+      duration: 0.8,
       ease: "power3.out",
     });
   };
@@ -135,7 +133,14 @@ const ProjectSection = () => {
   };
   return (
     <div className="min-h-screen w-full bg-cream py-10">
-      <h1 className="text-5xl text-center py-16 font-[FjallaOne]">Projects</h1>
+      <h1 className="text-5xl text-center py-16 font-[FjallaOne]"> Selected <span className="text-[#B58A3C]">Projects</span></h1>
+      {/* <div className="mb-28 mt-16 ">
+
+
+        <h2 className="text-[15vw] font-black leading-[0.8] tracking-[-0.06em] md:text-[8vw]">
+          Selected Project
+        </h2>
+      </div> */}
       <div className=" w-full  md:px-24  ">
         {projectData?.map((data, index) => {
           return (

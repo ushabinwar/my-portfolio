@@ -36,7 +36,7 @@ const ExperienceFrontPage = () => {
         x: -600,
         ease: "none",
       },
-      0
+      0,
     );
 
     tl.to(
@@ -45,7 +45,7 @@ const ExperienceFrontPage = () => {
         x: 600,
         ease: "none",
       },
-      0
+      0,
     );
 
     tl.to(
@@ -54,7 +54,7 @@ const ExperienceFrontPage = () => {
         x: -500,
         ease: "none",
       },
-      0
+      0,
     );
   });
 
@@ -71,11 +71,8 @@ const ExperienceFrontPage = () => {
 
   return (
     <section className="min-h-screen w-full bg-[#F8F3E1] text-black p-1">
-      
       <div className="overflow-hidden px-4 sm:px-6 md:px-20 py-10 mt-28 md:mt-6">
-
         <div ref={textRef}>
-
           {/* ROW 1 */}
           <div className="row1 overflow-hidden">
             <h1
@@ -136,7 +133,6 @@ const ExperienceFrontPage = () => {
               EXPERIENCE
             </h1>
           </div>
-
         </div>
 
         {/* Description */}
@@ -153,10 +149,11 @@ const ExperienceFrontPage = () => {
             leading-relaxed
           "
         >
-          A journey through the places I've worked, the things I've built,
-          and the experience that shaped me as a developer.
+          {/* A journey through the places I've worked, the things I've built,
+          and the experience that shaped me as a developer. */}
+          A journey through the places I’ve worked, the things I’ve built, and
+          the experiences that shaped the developer I am today.
         </p>
-
       </div>
 
       {/* Scroll Arrow */}
@@ -190,7 +187,6 @@ const ExperienceFrontPage = () => {
           />
         </svg>
       </div>
-
     </section>
   );
 };
