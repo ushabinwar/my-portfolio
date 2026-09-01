@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className='relative'>
       {/* <Navbar/> */}
-      <Loader/>
+      {/* <Loader/> */}
       <Hero/>
       <AnimateScrollbar/>
       <ProjectSection/>
