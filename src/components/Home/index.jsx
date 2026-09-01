@@ -24,7 +24,7 @@ const Home = () => {
       
       <Aboutpage/>
 
-      <MouseMoveAnimation/>
+      {/* <MouseMoveAnimation/> */}
       
      
       <Footer/>

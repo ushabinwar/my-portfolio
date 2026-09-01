@@ -27,8 +27,8 @@ const Footer = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: getRef.current,
-        start: "top 50%",
-        // markers: true,
+        start: "top 70%",
+        markers: true,
         once: true,
       },
     });

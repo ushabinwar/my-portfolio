@@ -3,12 +3,13 @@ import ushaImage from "../../../public/ushaimage.png";
 import { FaArrowRight } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Aboutpage = () => {
   const imageRef = useRef(null);
   const headingRef = useRef(null);
   const textRef = useRef(null);
+  const location = useLocation();
 
   const mouseEnter = () => {
     const cursor = document.querySelector("#custom-cursor");
@@ -67,10 +68,10 @@ const Aboutpage = () => {
 
       scrollTrigger: {
         trigger: imageRef.current,
-        start: "top 70%",
+        start: "top 75%",
         end: "top 40%",
         toggleActions: "play none none reverse",
-        // markers: true,
+        markers: true,
         scrub: 2,
       },
     });
@@ -181,20 +182,25 @@ const Aboutpage = () => {
               I'm usually exploring new technologies, refining my portfolio, or
               chasing that satisfying moment when everything finally works
               exactly as planned. */}
-              My journey has been shaped by curiosity, experimentation, and constantly asking, what could this become?
-From real-world applications to GSAP, animation, and creative frontend experiences, I’m always exploring new ways to build.
-
+              My journey has been shaped by curiosity, experimentation, and
+              constantly asking, what could this become? From real-world
+              applications to GSAP, animation, and creative frontend
+              experiences, I’m always exploring new ways to build.
             </p>
 
-              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-background font-[FjallaOne] text-right mt-6">
-           
-"I’m not just here to make things work — I want to create work that people remember."
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-background font-[FjallaOne] text-right mt-6">
+              "I’m not just here to make things work — I want to create work
+              that people remember."
             </p>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center mt-20">
+      <div
+        className={`flex justify-center mt-20 ${
+          location.pathname === "/about" ? "hidden" : ""
+        }`}
+      >
         <Link to="/about">
           <button className="border cursor-pointer bg-black text-cream flex items-center gap-3 text-2xl rounded-4xl px-10 py-2 relative border-black overflow-hidden group">
             <span className="absolute inset-0 bg-cream transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>

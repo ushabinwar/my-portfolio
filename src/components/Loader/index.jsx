@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -32,9 +29,12 @@ const Loader = () => {
     })
 
       // Small pause after 100%
-      .to({}, {
-        duration: 0.3,
-      })
+      .to(
+        {},
+        {
+          duration: 0.3,
+        },
+      )
 
       // Loader moves up
       .to(".loader", {
@@ -61,22 +61,23 @@ const Loader = () => {
 
   return (
     <div className="loader fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#F8F5F0]">
-
       {/* Percentage */}
-      <h2 className="mb-4 text-4xl font-bold text-black">
+      <h2 className="mb-4 font-[MangoGro] text-4xl font-bold text-black">
         {progress}%
       </h2>
+      <h1 className="text-3xl  mb-5 font-semibold text-black text-center px-10 font-[MangoGro] tracking-wide">
+        Created By Usha Binwar
+      </h1>
 
       {/* Progress Bar */}
       <div className="h-2 w-80 overflow-hidden rounded-full bg-black/10">
         <div
-          className="h-full bg-black"
+          className="h-full bg-[#B58A3C]"
           style={{
             width: `${progress}%`,
           }}
         />
       </div>
-
     </div>
   );
 };

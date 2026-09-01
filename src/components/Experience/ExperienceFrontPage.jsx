@@ -26,7 +26,6 @@ const ExperienceFrontPage = () => {
         start: "top 5%",
         end: "bottom 20%",
         scrub: 2,
-        // markers: true,
       },
     });
 
@@ -81,7 +80,7 @@ const ExperienceFrontPage = () => {
                 leading-20
                 text-center
                 md:text-[12vw]
-                md:leading-36
+                md:leading-28 lg:leading-36 
                 font-[MangoGro]
                 sm:text-[13vw]
                 lg:text-[10vw]
@@ -101,7 +100,7 @@ const ExperienceFrontPage = () => {
                 text-center
                 leading-20
                 md:text-[12vw]
-                md:leading-36
+                md:leading-28 lg:leading-36 
                 font-[MangoGro]
                 sm:text-[13vw]
                 lg:text-[10vw]
@@ -122,7 +121,7 @@ const ExperienceFrontPage = () => {
                 leading-20
                 text-center
                 md:text-[12vw]
-                md:leading-36
+                md:leading-28 lg:leading-36 
                 font-[MangoGro]
                 lg:text-[10vw]
                 font-black

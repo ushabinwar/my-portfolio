@@ -17,37 +17,40 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollProgress from "./components/ScrollProgress";
 import ExperiencePage from "./components/Experience";
 import Projects from "./components/Projects";
+import SmoothScroll from "./components/Scroll/SmoothScroll";
+import ScrollTop from "./components/Scroll/ScrollTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   
-  useEffect(() => {
-    const lenis = new Lenis({
-      // duration: 1.2,
-      // smoothWheel: true,
-      // touchMultiplier: 2,
-      duration: 1.2,
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.5,
-      infinite: false,
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     // duration: 1.2,
+  //     // smoothWheel: true,
+  //     // touchMultiplier: 2,
+  //     duration: 1.2,
+  //     smoothWheel: true,
+  //     wheelMultiplier: 1,
+  //     touchMultiplier: 1.5,
+  //     infinite: false,
+  //   });
 
-    lenis.on("scroll", ScrollTrigger.update);
+  //   lenis.on("scroll", ScrollTrigger.update);
 
-    const update = (time) => {
-      lenis.raf(time * 1000);
-    };
+  //   const update = (time) => {
+  //     lenis.raf(time * 1000);
+  //   };
 
-    gsap.ticker.add(update);
-    gsap.ticker.lagSmoothing(0);
+  //   gsap.ticker.add(update);
+  //   gsap.ticker.lagSmoothing(0);
 
-    return () => {
-      gsap.ticker.remove(update);
-      lenis.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     gsap.ticker.remove(update);
+  //     lenis.destroy();
+  //   };
+  // }, []);
+  
 
   //   const [theme, setTheme] = useState("light");
 
@@ -104,7 +107,10 @@ function App() {
     >
       {theme === "light" ? "🌙 Dark" : "☀️ Light"}
     </button> */}
+    <SmoothScroll />
+      <ScrollTop />
       <div className="relative">
+         
         <Cursor />
         <ScrollProgress />
         <Navbar />

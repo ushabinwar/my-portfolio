@@ -72,19 +72,19 @@ const AboutFrontPage = () => {
       
       <div ref={textRef} className=" ">
         <div className=" row1 overflow-hidden  ">
-          <h1 className="text-[20vw] leading-20 text-center md:text-[12vw] md:leading-36 font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
+          <h1 className="text-[20vw] leading-20 text-center md:text-[12vw] md:leading-28 lg:leading-36 font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
             Who I Am ?
           </h1>
         </div>
 
         <div className=" row2 overflow-hidden  ">
-          <h1 className="text-[20vw] text-center leading-20 md:text-[12vw] md:leading-36 font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
+          <h1 className="text-[20vw] text-center leading-20 md:text-[12vw] md:leading-28   lg:leading-36 font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
              LET'S
           </h1>
         </div>
 
         <div className="row3  overflow-hidden ">
-          <h1 className="sm:text-[13vw] text-[20vw] leading-20 text-center md:text-[12vw] md:leading-36 font-[MangoGro]  lg:text-[10vw] font-black uppercase">
+          <h1 className="sm:text-[13vw] text-[20vw] leading-20 text-center md:text-[12vw] md:leading-28   lg:leading-36 font-[MangoGro]  lg:text-[10vw] font-black uppercase">
             Know <span className="text-[#B58A3C]">About Me</span>
           </h1>
         </div>

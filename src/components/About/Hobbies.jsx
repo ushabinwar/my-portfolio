@@ -6,22 +6,19 @@ const Hobbies = () => {
     {
       id: 1,
       title: "Photography",
-      image:
-        "https://images.unsplash.com/photo-1632679760635-55966a6e3d42?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBob3RvZ3JhcGh8ZW58MHx8MHx8fDA%3D",
+      image: "/public/photography.avif",
       description: "Capturing everyday moments.",
     },
     {
       id: 2,
       title: "Content Creation",
-      image:
-        "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvbnRlbnQlMjBjcmVhdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
+      image: "/public/content.avif",
       description: "Sharing creative ideas.",
     },
     {
       id: 3,
       title: "Writing",
-      image:
-        "https://plus.unsplash.com/premium_photo-1684444605542-93725082d214?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d3JpdGluZ3xlbnwwfHwwfHx8MA%3D%3Ds",
+      image: "/public/writing.avif",
       description: "Thoughts into words.",
     },
   ];
@@ -87,9 +84,8 @@ const Hobbies = () => {
                 origin-center
                 transition-transform
                 duration-500
-                group-hover:scale-y-100">
-
-              </div>
+                group-hover:scale-y-100"
+              ></div>
 
               <div className="relative z-4 flex justify-between px-5 py-6 md:px-12 md:py-8 transition-colors duration-500 group-hover:text-white">
                 <h1 className="text-3xl w-[40%] flex items-center font-[FjallaOne]">

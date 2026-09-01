@@ -55,18 +55,18 @@ const Cursor = () => {
 
   useGSAP(() => {
     const xTo = gsap.quickTo(cursorRef.current, "x", {
-      duration: 0.5,
+      duration: 0.7,
       ease: "power3.out",
     });
 
     const yTo = gsap.quickTo(cursorRef.current, "y", {
-      duration: 0.5,
+      duration: 0.7,
       ease: "power3.out",
     });
 
     const move = (e) => {
-      xTo(e.clientX + 20);
-      yTo(e.clientY + 20);
+      xTo(e.clientX + 10);
+      yTo(e.clientY + 60);
     };
 
     window.addEventListener("mousemove", move);
@@ -80,7 +80,7 @@ const Cursor = () => {
       id="custom-cursor"
       className="
         fixed
-        top-0
+        top-[-5%]
         left-0
         h-5
         w-5
@@ -91,11 +91,7 @@ const Cursor = () => {
         text-cream
       
         pointer-events-none
-        border
-        // border-mix-blend-color
-        bg-black
-
-        // border-cream
+         bg-black
         z-9999
       "
     />
