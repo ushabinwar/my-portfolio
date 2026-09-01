@@ -71,7 +71,6 @@ const Aboutpage = () => {
         start: "top 75%",
         end: "top 40%",
         toggleActions: "play none none reverse",
-        markers: true,
         scrub: 2,
       },
     });
@@ -87,8 +86,6 @@ const Aboutpage = () => {
         trigger: headingRef.current,
         start: "top 75%",
         end: "top 55%",
-
-        // markers: true,
         //  scrub:2,
       },
     });
