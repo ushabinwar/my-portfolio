@@ -124,7 +124,7 @@ const Navbar = () => {
 
       <div
         ref={navRef}
-        className={`fixed inset-0 z-10 h-screen w-full bg-black text-cream
+        className={`fixed inset-0 z-[90] h-screen w-full bg-black text-cream 
     ${toggle ? "flex" : "hidden"}
     flex-col justify-center px-6 md:px-12 lg:px-20`}
       >
@@ -134,7 +134,12 @@ const Navbar = () => {
             <Link
               key={item.path}
               to={item.path}
-              onClick={() => setToggle(false)}
+              // onClick={() => setToggle(false)}
+              onClick={() => {
+                setTimeout(() => {
+                  setToggle(false);
+                }, 100);
+              }}
               className="nav-link group w-fit"
             >
               <div className="flex items-center gap-4 md:gap-8">
