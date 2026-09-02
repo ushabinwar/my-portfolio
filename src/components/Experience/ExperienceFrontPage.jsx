@@ -76,6 +76,7 @@ const ExperienceFrontPage = () => {
           <div className="row1 overflow-hidden">
             <h1
               className="
+                select-none caret-transparent
                 text-[20vw]
                 leading-20
                 text-center
@@ -96,6 +97,7 @@ const ExperienceFrontPage = () => {
           <div className="row2 overflow-hidden">
             <h1
               className="
+                select-none caret-transparent
                 text-[20vw]
                 text-center
                 leading-20
@@ -116,6 +118,7 @@ const ExperienceFrontPage = () => {
           <div className="row3 overflow-hidden">
             <h1
               className="
+                select-none caret-transparent
                 sm:text-[13vw]
                 text-[20vw]
                 leading-20

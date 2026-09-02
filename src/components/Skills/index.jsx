@@ -274,7 +274,7 @@ const Skills = () => {
           (04)
         </p> */}
 
-        <h2 className="text-[15vw] font-black leading-[0.8] tracking-[-0.06em] md:text-[8vw]">
+        <h2 className="select-none caret-transparent text-[15vw] font-black leading-[0.8] tracking-[-0.06em] md:text-[8vw]">
           SKILLS
         </h2>
       </div>

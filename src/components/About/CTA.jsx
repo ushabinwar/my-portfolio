@@ -34,19 +34,19 @@ export default function CTA() {
         </p>
 
         <div className="overflow-hidden">
-          <h1 className="font-[mangoGro] text-[14vw] md:text-[9vw] leading-[0.9] uppercase">
+          <h1 className="select-none caret-transparent font-[mangoGro] text-[14vw] md:text-[9vw] leading-[0.9] uppercase">
             LET'S BUILD
           </h1>
         </div>
 
         <div className="overflow-hidden">
-          <h1 className="font-[mangoGro] text-[14vw] md:text-[9vw] leading-[0.9] uppercase">
+          <h1 className="select-none caret-transparent font-[mangoGro] text-[14vw] md:text-[9vw] leading-[0.9] uppercase">
             SOMETHING
           </h1>
         </div>
 
         <div className="overflow-hidden">
-          <h1 className="font-[mangoGro] text-[14vw] md:text-[9vw] leading-[0.9] uppercase">
+          <h1 className="select-none caret-transparent font-[mangoGro] text-[14vw] md:text-[9vw] leading-[0.9] uppercase">
             TOGETHER
           </h1>
         </div>

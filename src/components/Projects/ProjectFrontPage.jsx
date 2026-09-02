@@ -68,19 +68,19 @@ const ProjectFrontPage = () => {
       <div className="  overflow-hidden px-4 sm:px-6 md:px-20 py-10 mt-28  md:mt-6 ">
         <div ref={textRef} className=" ">
           <div className=" row1 overflow-hidden  ">
-            <h1 className="text-[20vw] leading-20 text-center md:text-[12vw] md:leading-28 lg:leading-36  font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
+            <h1 className="select-none caret-transparent text-[20vw] leading-20 text-center md:text-[12vw] md:leading-28 lg:leading-36  font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
               THINGS I
             </h1>
           </div>
 
           <div className=" row2 overflow-hidden  ">
-            <h1 className="text-[20vw] text-center leading-20 text-[#B58A3C] md:text-[12vw] md:leading-28 lg:leading-36  font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
+            <h1 className="select-none caret-transparent text-[20vw] text-center leading-20 text-[#B58A3C] md:text-[12vw] md:leading-28 lg:leading-36  font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
               MADE
             </h1>
           </div>
 
           <div className="row3  overflow-hidden ">
-            <h1 className="sm:text-[13vw] text-[20vw] leading-20 text-center md:text-[12vw] md:leading-28 lg:leading-36 font-[MangoGro]  lg:text-[10vw] font-black uppercase">
+            <h1 className="select-none caret-transparent sm:text-[13vw] text-[20vw] leading-20 text-center md:text-[12vw] md:leading-28 lg:leading-36 font-[MangoGro]  lg:text-[10vw] font-black uppercase">
               ALONG THE WAY
             </h1>
           </div>

@@ -71,7 +71,7 @@ const Footer = () => {
     {
       name: "INSTAGRAM",
       icon: <FaInstagram className="text-2xl" />,
-      link: "https://instagram.com/",
+      link: "https://www.instagram.com/ushabinwar/",
     },
     {
       name: "GITHUB",
@@ -152,12 +152,12 @@ const Footer = () => {
 
       <div ref={textRef}>
         <div className="overflow-hidden">
-          <h1 className="text-9xl absolute bottom-[-5%] md:bottom-[-8%] md:text-[30vh] lg:hidden">
+          <h1 className="select-none caret-transparent text-9xl absolute bottom-[-5%] md:bottom-[-8%] md:text-[30vh] lg:hidden">
             USHA
           </h1>
         </div>
         <div className="overflow-hidden">
-          <h1 className="text-9xl absolute bottom-[-7%] text-[27vh] hidden lg:block">
+          <h1 className="select-none caret-transparent text-9xl absolute bottom-[-7%] text-[27vh] hidden lg:block">
             USHA BINWAR
           </h1>
         </div>

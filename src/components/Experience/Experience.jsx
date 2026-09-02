@@ -144,6 +144,7 @@ const Experience = () => {
 
           <h2
             className="
+              select-none caret-transparent
               text-[13vw]
               font-black
               uppercase
@@ -339,6 +340,7 @@ const Experience = () => {
                     lg:text-[4.5vw]
 
                     xl:text-[4vw]
+                    select-none caret-transparent
                   "
                 >
                   {experience.role}

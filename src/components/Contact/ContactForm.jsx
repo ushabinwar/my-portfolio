@@ -664,7 +664,7 @@ const ContactForm = () => {
             </defs>
           </svg>
 
-          <h1 className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-9xl  [-webkit-text-stroke:1px_white]  text-black font-[MangoGro] texts lg:[-webkit-text-stroke:2px_white] md:text-[28vh] leading-none font-bold">
+          <h1 className=" select-none caret-transparent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-9xl  [-webkit-text-stroke:1px_white]  text-black font-[MangoGro] texts lg:[-webkit-text-stroke:2px_white] md:text-[28vh] leading-none font-bold">
             CONTACT
           </h1>
         </div>

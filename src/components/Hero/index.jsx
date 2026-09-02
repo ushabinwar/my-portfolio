@@ -359,14 +359,14 @@ const Hero = () => {
         <div className="herotext">
           {/* First heading */}
           <div className="overflow-hidden">
-            <h1 className="font-[mangoGro] text-[7vh] md:text-[14vh] lg:text-[20vh] leading-none text-center">
+            <h1 className="select-none caret-transparent font-[mangoGro] text-[7vh] md:text-[14vh] lg:text-[20vh] leading-none text-center">
               Hi, I'm USHA BINWAR
             </h1>
           </div>
 
           {/* Second heading */}
           <div className="overflow-hidden">
-            <h1 className="font-[mangoGro] text-[7vh] md:text-[14vh] lg:text-[20vh] leading-none text-center">
+            <h1 className="select-none caret-transparent font-[mangoGro] text-[7vh] md:text-[14vh] lg:text-[20vh] leading-none text-center">
               CREATIVE WEB DEVELOPER
             </h1>
           </div>
