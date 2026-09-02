@@ -71,8 +71,8 @@ const Navbar = () => {
   console.log(toggle, "toggle satate");
   return (
     <>
-      <div className=" z-[99] w-full px-5 lg:px-10 py-4 flex justify-between  fixed">
-        <h5 className="font-[mangoGro] text-4xl ">UB</h5>
+      <div className=" z-[99] w-full px-5 lg:px-10 py-4 flex justify-end  fixed">
+        {/* <h5 className="font-[mangoGro] text-4xl tracking-wide ">UB</h5> */}
         {/* <div className="h-10 w-10 bg-red">
           <img className="h-full w-full object-cover" src="public/ub FavIcon.png" alt="" />
         </div> */}

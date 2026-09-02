@@ -21,8 +21,9 @@ const ProjectSection = () => {
         "HTML",
         "Tailwind CSS",
       ],
-      liveLink: "http://google.com",
+      liveLink: "https://github.com/ushabinwar/InternshalaApp",
       image: "/public/internshala.png",
+      linkType: "github"
     },
     {
       title: "fatfish Awwards Website",
@@ -31,6 +32,7 @@ const ProjectSection = () => {
       techStack: ["HTML", "CSS", "GSAP", "Scrolltrigger", "Locomotive"],
       liveLink: "https://ushabinwar.github.io/fatfish/",
       image: "/public/fatfish.png",
+      linkType: "live"
     },
     {
       title: "EJ Studio Awwards Website",
@@ -39,6 +41,7 @@ const ProjectSection = () => {
       techStack: ["HTML", "CSS", "GSAP", "Scrolltrigger", "Locomotive"],
       liveLink: "https://ushabinwar.github.io/ej-studio/",
       image: "/public/ejstudio.png",
+      linkType: "live"
     },
     {
       title: "We Think Elastic Awwards Website",
@@ -47,6 +50,7 @@ const ProjectSection = () => {
       techStack: ["HTML", "CSS", "GSAP", "Scrolltrigger", "Locomotive"],
       liveLink: "https://ushabinwar.github.io/we-think-elastic/",
       image: "/public/wethinkelastic.png",
+      linkType: "live"
     },
 
     // {
@@ -311,7 +315,8 @@ const ProjectSection = () => {
                       <span className="absolute inset-0 bg-black transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
 
                       <span className="relative transition-colors duration-300 ease-out group-hover:text-cream flex items-center gap-3 text-lg">
-                        Live Link
+                        {/* Live Link */}
+                        {data.linkType === "github" ? "View GitHub" : "Live Link"}
                         <FaArrowRight className="text-xl" />
                       </span>
                     </div>
