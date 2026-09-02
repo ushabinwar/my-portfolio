@@ -22,7 +22,7 @@ const ProjectSection = () => {
         "Tailwind CSS",
       ],
       liveLink: "https://github.com/ushabinwar/InternshalaApp",
-      image: "/public/internshala.png",
+      image: "/internshala.png",
       linkType: "github"
     },
     {
@@ -31,7 +31,7 @@ const ProjectSection = () => {
         "A visually immersive website inspired by the Fatfish Awwwards experience. Focused on creative layouts, smooth transitions, and scroll-based animations to create a highly interactive user experience.",
       techStack: ["HTML", "CSS", "GSAP", "Scrolltrigger", "Locomotive"],
       liveLink: "https://ushabinwar.github.io/fatfish/",
-      image: "/public/fatfish.png",
+      image: "/fatfish.png",
       linkType: "live"
     },
     {
@@ -40,7 +40,7 @@ const ProjectSection = () => {
         "A modern creative website inspired by the EJ Studio Awwwards design. Built around bold typography, interactive sections, smooth scrolling, and carefully crafted GSAP animations.",
       techStack: ["HTML", "CSS", "GSAP", "Scrolltrigger", "Locomotive"],
       liveLink: "https://ushabinwar.github.io/ej-studio/",
-      image: "/public/ejstudio.png",
+      image: "/ejstudio.png",
       linkType: "live"
     },
     {
@@ -49,7 +49,7 @@ const ProjectSection = () => {
         "A creative website inspired by the We Think Elastic Awwwards design. Recreated with experimental layouts, smooth scrolling, and GSAP-powered animations for a dynamic browsing experience.",
       techStack: ["HTML", "CSS", "GSAP", "Scrolltrigger", "Locomotive"],
       liveLink: "https://ushabinwar.github.io/we-think-elastic/",
-      image: "/public/wethinkelastic.png",
+      image: "/wethinkelastic.png",
       linkType: "live"
     },
 

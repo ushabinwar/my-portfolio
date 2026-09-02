@@ -6,19 +6,19 @@ const Hobbies = () => {
     {
       id: 1,
       title: "Photography",
-      image: "/public/photography.avif",
+      image: "/photography.avif",
       description: "Capturing everyday moments.",
     },
     {
       id: 2,
       title: "Content Creation",
-      image: "/public/content.avif",
+      image: "/content.avif",
       description: "Sharing creative ideas.",
     },
     {
       id: 3,
       title: "Writing",
-      image: "/public/writing.avif",
+      image: "/writing.avif",
       description: "Thoughts into words.",
     },
   ];
