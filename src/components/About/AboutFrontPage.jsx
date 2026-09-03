@@ -72,7 +72,7 @@ const AboutFrontPage = () => {
       
       <div ref={textRef} className=" ">
         <div className=" row1 overflow-hidden  ">
-          <h1 className=" select-none caret-transparenttext-[20vw] leading-20 text-center md:text-[12vw] md:leading-28 lg:leading-36 font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
+          <h1 className=" select-none caret-transparent text-[20vw]  leading-20 text-center md:text-[12vw] md:leading-28 lg:leading-36 font-[MangoGro] sm:text-[13vw]  lg:text-[10vw] font-black uppercase ">
             Who I Am ?
           </h1>
         </div>
